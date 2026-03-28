@@ -341,11 +341,9 @@ function pop(txt){
   if(txt==='search'){t='Searching Inventory';d='Checking the Michelin network for exclusive tables on October 3rd...';}
   if(txt==='ticket1'){t='Manage Reservation';d='You can update dietary requirements or request valet 48 hours prior to your seating.';}
   
-  c.innerHTML=\`
-    <div class="pop-t">\${t}</div>
-    <div class="pop-d">\${d}</div>
-    <button class="btn" style="background:var(--bg2);color:var(--t1);border:1px solid var(--border)" onclick="closePop()">Close</button>
-  \`;
+  c.innerHTML = '<div class="pop-t">' + t + '</div>' + 
+                '<div class="pop-d">' + d + '</div>' + 
+                '<button class="btn" style="background:var(--bg2);color:var(--t1);border:1px solid var(--border)" onclick="closePop()">Close</button>';
   document.getElementById('popOv').classList.add('open');
 }
 
